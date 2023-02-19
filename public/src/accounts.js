@@ -52,6 +52,10 @@ function getBooksPossessedByAccount(account, books, authors) {
 
 }
 
+function borrowsById (book, {id}) {
+  return book.borrows.filter(borrow => borrow.id === id);
+}
+
 module.exports = {
   findAccountById,
   sortAccountsByLastName,
